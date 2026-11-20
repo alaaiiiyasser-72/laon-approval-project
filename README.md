@@ -30,10 +30,11 @@ loan-approval-project/
 │   └── config.yaml
 │
 ├── src/
-│   ├── preprocessing/
+│   ├── __init__.py
+│   ├── processing/
 │   ├── training/
-│   ├── utills/
-│   └── xgb
+│   │── xgb.py
+│   └── utils/
 │
 ├── main.py
 ├── requirements.txt
