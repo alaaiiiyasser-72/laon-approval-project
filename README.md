@@ -1,42 +1,42 @@
-# 🏨 Hotel Reservations Machine Learning Project
+# 💳 Loan Approval Prediction Project
 
-A machine learning project focused on analyzing hotel reservation data and building a structured workflow for data exploration, preprocessing, and model training.
+An end-to-end **Machine Learning** project for predicting loan approval decisions based on applicant and loan-related data.
 
-The project is organized into modular components to support data processing, experimentation, model development, and pipeline execution.
+The project follows a structured workflow covering exploratory data analysis, configuration management, preprocessing, model training, and pipeline execution.
 
 ---
 
 ## 📌 Project Overview
 
-This project follows a modular machine learning workflow, starting with exploratory data analysis, followed by data processing, model development, and execution through a centralized entry point.
+This project aims to build a structured machine learning workflow for loan approval prediction.
 
-The project structure separates configuration, data, notebooks, and source code to improve maintainability, organization, and scalability.
+The codebase is organized into modular components to separate data, exploratory analysis, configuration, preprocessing, model training, and utility functions, making the project easier to maintain and extend.
 
 ---
 
 ## 🏗️ Project Structure
 
 ```text
-Hotel Reservations/
+loan-approval-project/
+│
+├── Data/
+│   └── Loan_approval_data_2025.csv
+│
+├── Notebooks/
+│   ├── eda.ipynb
+│   └── notebook.ipynb
 │
 ├── config/
-│   └── Configuration files
-│
-├── data/
-│   └── Dataset files
-│
-├── notebooks/
-│   ├── EDA
-│   └── notebook
+│   └── config.yaml
 │
 ├── src/
-│   ├── __init__.py
-│   ├── processing/
+│   ├── preprocessing/
 │   ├── training/
-│   ├── utils/
-│   └── xgb.py
+│   ├── utills/
+│   └── xgb
 │
 ├── main.py
+├── requirements.txt
 └── README.md
 ```
 
@@ -45,43 +45,33 @@ Hotel Reservations/
 ## 🔄 Workflow Overview
 
 ### 1. Exploratory Data Analysis (EDA)
-**Location:** `notebooks/`
+**Location:** `Notebooks/`
 
-- Explore the dataset and understand its structure.
-- Investigate data distributions and patterns.
+- Explore the dataset and its structure.
+- Analyze data distributions and patterns.
+- Investigate missing values and feature relationships.
 - Identify potential preprocessing requirements.
-- Explore relationships between variables.
 
 ### 2. Configuration Management
-**Location:** `config/`
+**Location:** `config/config.yaml`
 
-- Centralize project configuration.
-- Organize project settings and parameters.
-- Manage configuration elements used throughout the workflow.
+- Manage project configurations.
+- Organize dataset paths.
+- Configure model and pipeline settings.
 
-### 3. Data Processing
-**Location:** `src/processing/`
+### 3. Data Preprocessing & Model Development
+**Location:** `src/`
 
-- Organize data processing and preparation operations.
-- Prepare data for downstream machine learning tasks.
+- Prepare and preprocess input features.
+- Organize the machine learning training workflow.
+- Develop and train machine learning models, including XGBoost.
+- Structure reusable components for preprocessing and training.
 
-### 4. Model Training
-**Location:** `src/training/`
-
-- Organize model training procedures.
-- Structure the machine learning development workflow.
-
-### 5. Utilities
-**Location:** `src/utils/`
-
-- Provide reusable helper functions.
-- Support different components of the project.
-
-### 6. Pipeline Execution
+### 4. Pipeline Execution
 **Entry Point:** `main.py`
 
-- Serve as the main entry point for running the project workflow.
-- Coordinate the project's main execution process.
+- Serve as the main entry point for the project.
+- Orchestrate the end-to-end machine learning workflow.
 
 ---
 
@@ -90,8 +80,8 @@ Hotel Reservations/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-folder>
+git clone https://github.com/alaiiiyasser-72/laon-approval-project.git
+cd laon-approval-project
 ```
 
 ### 2. Create a Virtual Environment
@@ -108,7 +98,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-**Linux / macOS:**
+**macOS / Linux:**
 
 ```bash
 source venv/bin/activate
@@ -130,32 +120,27 @@ python main.py
 
 ## 🛠️ Tools & Technologies
 
-- Python
-- Jupyter Notebook
-- Machine Learning
-- Data Analysis
+- **Python** – Project implementation.
+- **Pandas** – Data manipulation and processing.
+- **Scikit-learn** – Machine learning and preprocessing tools.
+- **XGBoost** – Gradient boosting model development.
+- **Jupyter Notebook** – Exploratory data analysis and experimentation.
+- **YAML** – Configuration management.
 
 ---
 
-## 📌 Future Documentation Updates
+## 📌 Notes
 
-The README can be extended with further technical details, including:
-
-- Dataset description.
-- Target variable definition.
-- Feature engineering techniques.
-- Machine learning algorithms.
-- Model evaluation metrics.
-- Model comparison and performance.
-- Deployment or inference workflow.
+- Ensure the dataset path in `config/config.yaml` matches the actual dataset location.
+- Install the required dependencies before running the pipeline.
+- Model evaluation metrics and additional implementation details can be added as the project documentation evolves.
 
 ---
 
 ## 👩‍💻 Author
 
-**Alaa Yasser**
+**Alaa yasser**
 
 Computer Science Student | Artificial Intelligence
 
 Interested in Machine Learning, Data Analytics, AI Applications, and AI Agents.
-```
